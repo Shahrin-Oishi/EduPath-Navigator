@@ -1,178 +1,427 @@
-# EduPath Navigator - AI-Powered Learning Roadmap Platform
-
-## Academic Information
-- **University:** Northern University of Business and Technology Khulna (NUBTK)
-- **Course Title:** Software Project / System Design Lab
-- **Section:** 8C
-- **Team Number:** CSE4204-8c-to9
-
-## Project Overview
-EduPath Navigator is an AI-powered web application designed to help students and beginners follow a structured, adaptive, and step-by-step learning journey based on their career goals.
-
-## Team Name
-1. Amalan Sarkar (Leader) - ID: CSE11220320909
-2. Shahrin Oishi - ID: CSE11220320970
-3. Farhana Faruq Prity - ID: CSE11220320929
-4. William Sardar - ID: CSE11220321049
-
-## Repository Structure
-- `frontend/` - Frontend single-page application (React.js)
-- `backend/` - REST API environment (Node.js & Express.js)
-- `database/` - Document-oriented data storage logs (MongoDB)
-- `documentation/` - Official System Design & Architecture reports
-- `diagrams/` - Structural diagrams (Architecture, ERD, Use Case, Activity Workflow)|
-
 # EduPath Navigator
 
-An AI-powered learning roadmap platform that helps you navigate your tech career with structured paths, skill tracking, and intelligent guidance.
+### AI-Powered Learning Roadmap Platform
 
-## Features
+EduPath Navigator is an AI-powered web application that helps students, beginners, and self-learners follow structured, adaptive, and goal-based learning roadmaps for technology careers.
 
-- **8+ Career Roadmaps** — Web Dev, ML, Data Science, Cybersecurity, DevOps, UI/UX, Mobile, Software Engineering
-- **AI Roadmap Generator** — Describe your goal, get a custom step-by-step learning path
-- **AI Skill Analyzer** — Enter your skills, get career match analysis and gap report
-- **AI Chat Assistant** — 24/7 AI mentor for learning questions and career guidance
-- **Progress Tracking** — Mark skills complete, visualize progress with a beautiful tree UI
-- **Beautiful Dashboard** — Stats, active roadmaps, quick actions, and progress overview
-- **JWT Authentication** — Secure signup/login with bcrypt password hashing
+It provides predefined career paths, AI-generated personalized roadmaps, skill gap analysis, progress tracking, and an AI chat assistant to guide users throughout their learning journey.
 
-## Tech Stack
+---
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, Vite, Tailwind CSS, React Router v6 |
-| Backend | Node.js, Express.js, REST API |
-| Database | MongoDB, Mongoose |
-| Auth | JWT, bcryptjs |
-| AI | OpenAI GPT-3.5 / Google Gemini (with demo fallback) |
-| UI Icons | Lucide React |
+## Project Information
+
+| Field        | Details                                               |
+| ------------ | ----------------------------------------------------- |
+| University   | Northern University of Business and Technology Khulna |
+| Course Title | Software Project / System Design Lab                  |
+| Section      | 8C                                                    |
+| Team Number  | CSE4204-8c-to9                                        |
+| Project Name | EduPath Navigator                                     |
+
+---
+
+## Team Members
+
+| SL | Name                | Role        | Student ID     |
+| -- | ------------------- | ----------- | -------------- |
+| 1  | Amalan Sarkar       | Team Leader | CSE11220320909 |
+| 2  | Shahrin Oishi       | Member      | CSE11220320970 |
+| 3  | Farhana Faruq Prity | Member      | CSE11220320929 |
+| 4  | William Sardar      | Member      | CSE11220321049 |
+
+---
+
+## Overview
+
+Many beginners struggle to start learning because they do not know which skills to learn first, how to organize their learning journey, or how to measure their progress.
+
+EduPath Navigator solves this problem by providing a guided learning platform where users can select a career goal, follow a step-by-step roadmap, track completed skills, and receive AI-powered guidance based on their current knowledge and future goals.
+
+The platform is designed especially for students, beginners, and career changers who want a clear and organized path toward a technology-based career.
+
+---
+
+## Key Features
+
+### Career Roadmaps
+
+Users can explore structured roadmaps for different technology careers, including:
+
+* Web Development
+* Machine Learning
+* Data Science
+* Cybersecurity
+* DevOps
+* UI/UX Design
+* Mobile App Development
+* Software Engineering
+
+### AI Roadmap Generator
+
+Users can describe their career goal, and the system generates a personalized step-by-step learning roadmap.
+
+### AI Skill Analyzer
+
+Users can enter their existing skills, and the system analyzes:
+
+* Current skill level
+* Suitable career paths
+* Missing skills
+* Recommended learning steps
+
+### AI Chat Assistant
+
+The platform includes an AI mentor that can answer learning-related questions, provide career guidance, and support users during their learning journey.
+
+### Progress Tracking
+
+Users can mark skills as completed and track their progress visually through an interactive roadmap interface.
+
+### User Dashboard
+
+The dashboard provides a complete overview of:
+
+* Active roadmaps
+* Completed skills
+* Learning progress
+* Quick actions
+* User statistics
+
+### Authentication System
+
+Secure authentication is implemented using JWT and bcrypt password hashing.
+
+---
+
+## Technology Stack
+
+| Layer          | Technology                     |
+| -------------- | ------------------------------ |
+| Frontend       | React 18, Vite, Tailwind CSS   |
+| Routing        | React Router v6                |
+| Backend        | Node.js, Express.js            |
+| Database       | MongoDB, Mongoose              |
+| Authentication | JWT, bcryptjs                  |
+| AI Integration | OpenAI GPT-3.5 / Google Gemini |
+| Icons          | Lucide React                   |
+| API Type       | Groq API                       |
+
+---
 
 ## Project Structure
 
-```
+```bash
 edupath-navigator/
-├── client/                 # React frontend
+│
+├── client/                         # Frontend application
 │   └── src/
-│       ├── components/     # Reusable UI components
-│       ├── context/        # Auth & Progress context
-│       ├── data/           # Static career path data
-│       ├── layouts/        # Dashboard layout
-│       ├── pages/          # All page components
-│       ├── services/       # API service layer
-│       └── utils/          # Helper functions
+│       ├── components/             # Reusable UI components
+│       ├── context/                # Authentication and progress context
+│       ├── data/                   # Static roadmap data
+│       ├── layouts/                # Layout components
+│       ├── pages/                  # Application pages
+│       ├── services/               # API service layer
+│       └── utils/                  # Utility functions
 │
-├── server/                 # Express backend
-│   ├── config/             # Database config
-│   ├── controllers/        # Route logic
-│   ├── data/               # Static roadmap seed data
-│   ├── middleware/         # JWT auth middleware
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   └── services/           # AI service (OpenAI/Gemini)
+├── server/                         # Backend application
+│   ├── config/                     # Database configuration
+│   ├── controllers/                # Controller logic
+│   ├── data/                       # Roadmap seed data
+│   ├── middleware/                 # Authentication middleware
+│   ├── models/                     # Mongoose models
+│   ├── routes/                     # API routes
+│   └── services/                   # AI service integration
 │
-└── .env.example            # Environment variables template
+├── database/                       # Database documentation and logs
+├── documentation/                  # System design and architecture reports
+├── diagrams/                       # Architecture, ERD, use case and workflow diagrams
+├── .env.example                    # Environment variables example file
+└── README.md                       # Project documentation
 ```
 
-## Quick Start
+---
 
-### Prerequisites
-- Node.js 18+
-- MongoDB (local or Atlas)
-- (Optional) OpenAI or Gemini API key
+## Application Pages
 
-### 1. Clone and install
+| Page                 | Route           | Description                               |
+| -------------------- | --------------- | ----------------------------------------- |
+| Landing Page         | `/`             | Public homepage of the platform           |
+| Sign Up              | `/signup`       | User registration page                    |
+| Login                | `/login`        | User login page                           |
+| Dashboard            | `/dashboard`    | Main user dashboard                       |
+| Career Paths         | `/career-paths` | Browse available career roadmaps          |
+| Roadmap Details      | `/roadmap/:id`  | View detailed roadmap and skill tree      |
+| AI Roadmap Generator | `/ai/generate`  | Generate custom roadmap using AI          |
+| AI Skill Analyzer    | `/ai/analyze`   | Analyze skills and identify learning gaps |
+| AI Chat              | `/ai/chat`      | Chat with the AI assistant                |
+| Profile              | `/profile`      | View and update user profile              |
+
+---
+
+## Getting Started
+
+Follow the instructions below to run the project locally.
+
+---
+
+## Prerequisites
+
+Make sure the following tools are installed on your system:
+
+* Node.js 18 or above
+* npm
+* MongoDB local server or MongoDB Atlas account
+* OpenAI API key or Gemini API key, optional
+
+---
+
+## Installation
+
+### 1. Clone the Repository
 
 ```bash
-# Install server dependencies
+git clone <repository-url>
+cd edupath-navigator
+```
+
+---
+
+### 2. Install Backend Dependencies
+
+```bash
 cd server
 npm install
+```
 
-# Install client dependencies
+---
+
+### 3. Install Frontend Dependencies
+
+```bash
 cd ../client
 npm install
 ```
 
-### 2. Configure environment
+---
+
+## Environment Variables
+
+Create a `.env` file inside the `server` directory.
+
+You can copy the example file:
 
 ```bash
-# Copy example env to server
 cp .env.example server/.env
-# Edit server/.env with your MongoDB URI and API keys
 ```
 
-### 3. Start development servers
+Then configure the following environment variables:
 
-**Backend** (Terminal 1):
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+
+OPENAI_API_KEY=your_openai_api_key
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+> Note: AI API keys are optional. If no API key is provided, the system can run in demo mode using predefined AI responses.
+
+---
+
+## Running the Project
+
+### Start the Backend Server
+
 ```bash
 cd server
 npm run dev
 ```
 
-**Frontend** (Terminal 2):
+Backend server will run at:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+### Start the Frontend Server
+
+Open another terminal and run:
+
 ```bash
 cd client
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Frontend application will run at:
 
-## API Endpoints
+```bash
+http://localhost:5173
+```
 
-### Auth
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/signup` | Create account |
-| POST | `/api/auth/login` | Login |
-| GET | `/api/auth/me` | Get current user |
+---
 
-### Roadmaps
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/roadmaps` | All roadmaps |
-| GET | `/api/roadmaps/:id` | Single roadmap |
+## API Documentation
 
-### Progress
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/progress` | User's progress |
-| POST | `/api/progress/update` | Update skill completion |
-| DELETE | `/api/progress/reset` | Reset progress |
+### Authentication Routes
 
-### AI
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/ai/generate-roadmap` | Generate custom roadmap |
-| POST | `/api/ai/skill-analyze` | Analyze skills |
-| POST | `/api/ai/chat` | AI chat message |
-| GET | `/api/ai/chat/history` | Chat history |
-| DELETE | `/api/ai/chat/history` | Clear history |
+| Method | Endpoint           | Description                    |
+| ------ | ------------------ | ------------------------------ |
+| POST   | `/api/auth/signup` | Register a new user            |
+| POST   | `/api/auth/login`  | Login an existing user         |
+| GET    | `/api/auth/me`     | Get current authenticated user |
 
-### User
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/user/profile` | Get profile + stats |
-| PUT | `/api/user/profile` | Update profile |
+---
+
+### Roadmap Routes
+
+| Method | Endpoint            | Description                |
+| ------ | ------------------- | -------------------------- |
+| GET    | `/api/roadmaps`     | Get all roadmaps           |
+| GET    | `/api/roadmaps/:id` | Get a single roadmap by ID |
+
+---
+
+### Progress Routes
+
+| Method | Endpoint               | Description                    |
+| ------ | ---------------------- | ------------------------------ |
+| GET    | `/api/progress`        | Get user progress              |
+| POST   | `/api/progress/update` | Update skill completion status |
+| DELETE | `/api/progress/reset`  | Reset user progress            |
+
+---
+
+### AI Routes
+
+| Method | Endpoint                   | Description                  |
+| ------ | -------------------------- | ---------------------------- |
+| POST   | `/api/ai/generate-roadmap` | Generate a custom AI roadmap |
+| POST   | `/api/ai/skill-analyze`    | Analyze user skills          |
+| POST   | `/api/ai/chat`             | Send message to AI assistant |
+| GET    | `/api/ai/chat/history`     | Get chat history             |
+| DELETE | `/api/ai/chat/history`     | Clear chat history           |
+
+---
+
+### User Routes
+
+| Method | Endpoint            | Description                     |
+| ------ | ------------------- | ------------------------------- |
+| GET    | `/api/user/profile` | Get user profile and statistics |
+| PUT    | `/api/user/profile` | Update user profile             |
+
+---
 
 ## AI Configuration
 
-The app works in three modes:
+EduPath Navigator supports three AI modes.
 
-1. **OpenAI** — Set `OPENAI_API_KEY` in server `.env` (uses GPT-3.5-turbo)
-2. **Gemini** — Set `GEMINI_API_KEY` in server `.env` (uses Gemini Pro)
-3. **Demo mode** — No API key needed — pre-written responses (fully functional)
+### OpenAI Mode
 
-## Pages
+Add your OpenAI API key to the server `.env` file:
 
-| Page | Route | Description |
-|------|-------|-------------|
-| Landing | `/` | Marketing homepage |
-| Sign Up | `/signup` | Create account |
-| Login | `/login` | Sign in |
-| Dashboard | `/dashboard` | Main overview |
-| Career Paths | `/career-paths` | Browse all paths |
-| Roadmap | `/roadmap/:id` | Path detail + tree |
-| AI Generator | `/ai/generate` | Custom AI roadmap |
-| AI Analyzer | `/ai/analyze` | Skill gap analysis |
-| AI Chat | `/ai/chat` | Chat with EduBot |
-| Profile | `/profile` | User profile + stats |
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
 
+### Gemini Mode
+
+Add your Gemini API key to the server `.env` file:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### Demo Mode
+
+If no AI API key is provided, the application will use predefined demo responses. This allows the project to remain functional without paid API access.
+
+---
+
+## System Architecture
+
+EduPath Navigator follows a client-server architecture.
+
+The React frontend communicates with the Express backend through REST API endpoints. The backend handles authentication, roadmap data, progress tracking, AI service requests, and database operations. MongoDB is used to store user information, roadmap data, progress records, and chat history.
+
+```bash
+User
+  │
+  ▼
+React Frontend
+  │
+  ▼
+Express.js REST API
+  │
+  ├── MongoDB Database
+  │
+  └── AI Service
+        ├── OpenAI
+        └── Google Gemini
+```
+
+---
+
+## Main Modules
+
+### User Module
+
+Handles user registration, login, authentication, and profile management.
+
+### Roadmap Module
+
+Manages predefined career roadmaps and roadmap details.
+
+### Progress Module
+
+Stores and updates user learning progress.
+
+### AI Module
+
+Handles roadmap generation, skill analysis, and AI chat responses.
+
+### Dashboard Module
+
+Displays user statistics, roadmap progress, and quick navigation options.
+
+---
+
+## Security Features
+
+* Password hashing using bcryptjs
+* JWT-based authentication
+* Protected private routes
+* User-specific progress data
+* Environment-based configuration
+* Secure API route handling
+
+---
+
+## Future Enhancements
+
+* Admin dashboard for roadmap management
+* More career categories
+* Certificate generation after roadmap completion
+* Course and video recommendation system
+* Community discussion forum
+* Notification and reminder system
+* Personalized study planner
+* Mobile application version
+* Advanced analytics dashboard
+
+---
+
+## Academic Purpose
+
+This project was developed as part of the Software Project / System Design Lab course. It demonstrates system design, frontend development, backend API development, database integration, authentication, and AI service integration in a real-world web application.
+
+---
+
+## Conclusion
+
+EduPath Navigator provides a smart, structured, and AI-powered solution for career-based learning. By combining predefined roadmaps, personalized AI suggestions, progress tracking, and an interactive dashboard, the platform helps learners follow a clear path toward their career goals.
+
+The project is suitable for academic evaluation, system design demonstration, and future real-world development.
