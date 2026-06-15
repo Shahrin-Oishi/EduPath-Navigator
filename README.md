@@ -9,7 +9,7 @@
 ## Project Overview
 EduPath Navigator is an AI-powered web application designed to help students and beginners follow a structured, adaptive, and step-by-step learning journey based on their career goals.
 
-## Team Members
+## Team Name
 1. Amalan Sarkar (Leader) - ID: CSE11220320909
 2. Shahrin Oishi - ID: CSE11220320970
 3. Farhana Faruq Prity - ID: CSE11220320929
