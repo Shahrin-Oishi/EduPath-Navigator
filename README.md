@@ -4,7 +4,7 @@
 - **University:** Northern University of Business and Technology Khulna (NUBTK)
 - **Course Title:** Software Project / System Design Lab
 - **Section:** 8C
-- **Team Number:** T09
+- **Team Number:** CSE4204-8c-to9
 
 ## Project Overview
 EduPath Navigator is an AI-powered web application designed to help students and beginners follow a structured, adaptive, and step-by-step learning journey based on their career goals.
