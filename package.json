@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "AI-based Learning Roadmap Website",
   "scripts": {
+    "build": "npm --prefix backend ci --include=dev && npm --prefix database ci && npm --prefix frontend ci --include=dev && npm --prefix frontend run build",
+    "start": "node backend/server.js",
     "dev": "node scripts/dev.js",
     "dev:server": "cd backend && npm run dev",
     "dev:client": "cd frontend && npm run dev",

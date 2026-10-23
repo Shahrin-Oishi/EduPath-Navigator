@@ -131,3 +131,11 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 - [API Endpoints](documentation/API_ENDPOINTS.md)
 - [AI Configuration](documentation/AI_CONFIGURATION.md)
 - [Pages](documentation/PAGES.md)
+
+## Live deployment
+
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/Shahrin-Oishi/EduPath-Navigator)
+
+The included render.yaml configures a single free Node web service serving React and the API. Supply a working MongoDB Atlas URI and Groq key through Render environment settings. Render generates the private JWT secret. Local database files and accounts are not included.
+
+See [deployment instructions](documentation/DEPLOYMENT.md) for Atlas network access, build/start commands and verification.
