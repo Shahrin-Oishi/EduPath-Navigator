@@ -1,0 +1,27 @@
+# Environment files
+.env
+.env.local
+.env.production
+.env.*
+!.env.example
+*.bak
+*.pem
+*.pfx
+
+# Dependencies
+node_modules/
+.local/
+test-results/
+playwright-report/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

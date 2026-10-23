@@ -1,0 +1,10 @@
+{
+  "name": "edupath-navigator-database",
+  "version": "1.0.0",
+  "description": "EduPath Navigator Mongoose models, DB connection, and seed data",
+  "main": "config/db.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "mongoose": "^8.0.3"
+  }
+}

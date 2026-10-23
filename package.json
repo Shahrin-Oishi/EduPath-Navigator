@@ -1,0 +1,11 @@
+{
+  "name": "edupath-navigator",
+  "version": "1.0.0",
+  "description": "AI-based Learning Roadmap Website",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:server": "cd backend && npm run dev",
+    "dev:client": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../database && npm install && cd ../frontend && npm install"
+  }
+}
